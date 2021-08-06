@@ -17,7 +17,7 @@ $pro_name=test_input($_POST["pro_name"]);
 $pro_qty=test_input($_POST["pro_qty"]);
 $pro_price=test_input($_POST["pro_price"]);
 if(empty($_POST["pro_qty"])) {
-echo "** تعداد خریدهای خود را وارد نمایید لطفا**";
+echo "** تعدادهای خریدهای خود را وارد نمایید لطفا**";
 }
 	
 else {

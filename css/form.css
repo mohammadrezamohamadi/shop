@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+@font-face {
+font-family: 'vazir';
+src:url("../fonts/Vazir-FD.woff")format("woff"),
+url("../fonts/Vazir-FD.eot")format("eot"),
+url("../fonts/Vazir-FD.ttf")format("truetype") 
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'vazir', sans-serif;
+direction: rtl;
+}
+
+body {
+font-family: 'vazir', sans-serif;
+height: 100vh;
+background: url(../images/bg.png) repeat;
+background-size: cover;
+}
+
+.wrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+min-height: 100%;
+padding: 20px;
+}
+
+.login {
+border-radius: 2px 5px 5px 5px;
+padding: 10px 20px 20px 20px;
+width: 100%;
+max-width: 320px;
+background: #fff;
+box-shadow: 0px 1px 5px rgba(0,0,0,.3);
+position: relative;
+}
+
+.login .title {
+text-align: right;
+color: #444;
+font-size: 19px;
+margin: 10px 0 30px 0;
+border-bottom: 1px solid #eee;
+padding-bottom: 20px;
+}
+
+.login input.login-text {
+display: block;
+padding: 15px 10px;
+margin-bottom: 10px;
+width: 100%;
+border: 1px solid #ddd;
+-webkit-transition: border-width .2s ease;
+-o-transition: border-width .2s ease;
+transition: border-width .2s ease;
+color: #ccc;
+text-align: right;
+}
+
+.login input.login-text + i {
+color: #fff;
+font-size: 1em;
+position: absolute;
+margin-top: -47px;
+right: 0;
+opacity: 0;
+transition: all .2s;
+}
+
+.login input.login-text:focus {
+outline: none;
+color: #444;
+border-color: #2196f3;
+border-right-width: 35px;
+}
+
+.login input.login-text:focus + i {
+opacity: 1;
+right: 30px;
+transition: all .2s;
+}
+
+.checkform {
+padding: 13px 5px;
+text-align: center;
+color: #fff;
+background: #e74c3c;
+width: 100%;
+border: none;
+}
+
+#err-box {
+width: 40%;
+height: 100px;
+background-color: #ff7105;
+border-radius: 4px;
+box-shadow:0 0 15 #777;
+position: fixed;
+top:50%;
+left:30%;
+text-align: center;
+line-height: 90px;
+font-size: 18px;
+color: #fff;
+display: none;
+}
+
+#err-close {
+position: absolute;
+line-height: 0;
+right: 10;
+top: 10;
+background-color: #f9974c;
+display: inline-block;
+padding: 15px 10px;
+border-radius: 50%;
+cursor: pointer;
+}
+
+.file {
+	margin: 10px 0;
+	width: 100%;
+	min-width: 200px;
+	height: 30px;
+	line-height: 28px !important;
+	cursor: pointer;
+	position: relative;
+	float: right;
+}
+
+.file:before {
+	font-family: 'vazir';
+	content: 'فایلی انتخاب نشده است';
+	display: block;
+	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 80px 0 10px;
+	border: 0px solid #e8eeef;
+	border-width: 2px 0 3px 3px;
+	border-radius: 3px 0 0 3px;
+	background: #fff;
+	color: #34495e;
+	font-size: 12px;
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.file[title]:not([title=""]):before {
+	content: attr(title);
+	color: #162f44;
+}
+
+.file input {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	opacity:  0;
+	cursor:  pointer;
+	z-index: 1;
+}
+
+.file:after {
+	font-family: 'vazir';
+	content: 'انتخاب فایل';
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	width: 74px;
+	height: 32px;
+	padding: 0 4px;
+	border-radius: 0 3px 3px 0;
+	background: #a0b7c5;
+	color: #fff;
+	overflow: hidden;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+}
